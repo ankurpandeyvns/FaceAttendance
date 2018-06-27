@@ -2,11 +2,23 @@
 <body>
     <div class="container" style="width: 50%; height: 50%;">
         <div class="card" style="padding: 10px;">
-            <video class="responsive-video" controls>
-                <source src="/static/media/vdo/abc.MP4" type="video/mp4">
-            </video>
+            <div class="card-image">
+                <img src="{{ url_for('video_feed') }}">
+            </div>
+            <form id="takepic" name="takepic" method="POST">
+                <input type="submit" id="click" name="click" class="btn" value="click">
+            </form>
         </div>
     </div>
+
+<script>
+    $(function(){
+        $(".click").click(function(e){
+            e.preventDefault();
+            $(".takepic").submit();
+        })
+    });
+</script>
 </body>
 {% include 'footer.html' %}
         
