@@ -1,0 +1,2 @@
+def recognizer():
+    return 'recognized'

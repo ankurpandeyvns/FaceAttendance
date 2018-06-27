@@ -1,4 +1,5 @@
 from flask import *
+from func import recognizer
 
 app = Flask(__name__)
 
