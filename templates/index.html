@@ -1,10 +1,42 @@
 {% include 'header.html' %}
 <body>
-    <div class="container" style="width: 50%; height: 50%;">
-        <div class="card" style="padding: 10px;">
-            <video class="responsive-video" controls>
-                <source src="/static/media/vdo/abc.MP4" type="video/mp4">
-            </video>
+    <div class="row valign-wrapper">
+        <div class="col s8">
+            <div class="card" style="padding: 5px;">
+                <video class="responsive-video" autoplay loop muted>
+                    <source src="/static/media/vdo/abc.MP4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="card-panel center" style="padding: 10px;">
+                <div class="preloader-wrapper small active">
+                    <div class="spinner-layer spinner-green-only">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div><div class="gap-patch">
+                            <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+                <p>Please wait your attendance is being marked...</p>
+            </div>
+            <div class="card-panel green center white-text" style="padding: 10px;">
+                <div class="fas fa-check-circle active">
+                </div>
+                <p>Successfully marked</p>
+            </div>
+            <div class="card-panel red re-text white-text center" style="padding: 10px;">
+                <div class="large active fas fa-exclamation-circle">
+                </div>
+                <p>Oops! Face not recognised</p>
+            </div>
+            <div class="card center" style="padding: 10px;">
+                <p>Name: John Doe</p>
+                <p>Reg.: 11503654</p>
+            </div>
         </div>
     </div>
 </body>
